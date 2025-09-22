@@ -30,7 +30,7 @@ function quickMenu(){
 }
 
 function fullSlide(id, opt){
-  if($(id + ' .swiper-slide').length <= opt.min) return;  
+  if($(id + ' .swiper-slide').length <= opt.min) return;
   if($(id).hasClass('main-slider') && $(id + ' .swiper-slide').length > 1 && $(id + ' .swiper-slide').length <= 4) {
     $(id + ' .swiper-wrapper').append($(id + ' .swiper-wrapper').html())
   }
@@ -44,7 +44,7 @@ function fullSlide(id, opt){
   }
 
   if(opt && opt.autoplay) opt.autoplay.disableOnInteraction = false
-  
+
   let option = {
     loop: true,
     // autoplay:{
@@ -58,20 +58,20 @@ function fullSlide(id, opt){
     navigation: {
       nextEl: id + " .swiper-button-next",
       prevEl: id + " .swiper-button-prev",
-    }, 
+    },
   }
     let swiper = new Swiper(id, Object.assign(option, opt));
-    
-}  
+
+}
 
 function basicSlide(id, opt){
-  if($(id + ' .swiper-slide').length <= opt.min) return;  
+  if($(id + ' .swiper-slide').length < opt.min) return;
   if($(id).hasClass('product-slide-list') && $(id + ' .swiper-slide').length > 4 && $(id + ' .swiper-slide').length <= 8) {
     $(id + ' .swiper-wrapper').append($(id + ' .swiper-wrapper').html())
   }
 
   if(opt && opt.autoplay) opt.autoplay.disableOnInteraction = false
-  
+
   let option = {
       loop: true,
       speed :800,
@@ -83,7 +83,7 @@ function basicSlide(id, opt){
       navigation: {
         nextEl: id + " .swiper-button-next",
         prevEl: id + " .swiper-button-prev",
-      },       
+      },
     }
 
     if($(id +" .swiper-scrollbar").length > 0) {
@@ -94,26 +94,26 @@ function basicSlide(id, opt){
     }
 
     let swiper = new Swiper(id, Object.assign(option, opt));
-}  
+}
 
 
 
 function upani(){
-  if($('[data-ani]').length <= 0) return; 
+  if($('[data-ani]').length <= 0) return;
   let dir = true
   let scrollPos = 0
   $(window).scroll(function(){
-    let scTop = $(window).scrollTop();  
+    let scTop = $(window).scrollTop();
     $('[data-ani]').each(function(){
           let top = $(this).get(0).getBoundingClientRect();
           dir = scrollPos - scTop > 0
-  
-          let pos =  $(window).height() - $(window).height() / 6;    
-  
+
+          let pos =  $(window).height() - $(window).height() / 6;
+
           if(top.top < pos) {
             $(this).each(function(){
               let $this = $(this);
-              let delay =$this.data('delay')? $this.data('delay') : 0;              
+              let delay =$this.data('delay')? $this.data('delay') : 0;
               setTimeout(function(){
                 $this.addClass('on');
               }, delay);
@@ -122,7 +122,7 @@ function upani(){
      })
      scrollPos = scTop;
   });
-  
+
 }
 
 
@@ -148,9 +148,9 @@ function popTooltip(){
 	$("[data-evt=pop-tooltip]").on("click", function() {
     $tooltip = $(this).parents('.pop-tooltip-wrap').find('.pop-tooltip');
     $close = $tooltip.find('.close');
-    
+
     $tooltip.addClass('on');
-      
+
     $close.on('click', function(){
       $tooltip.addClass('off');
       setTimeout(function(){
@@ -238,13 +238,13 @@ function tabScrollEvt(){
 
 
 
-function countInput(obj){  
+function countInput(obj){
   if($(obj).length <= 0) return;
   $(obj).each(function(){
     let $obj = $(this);
     let $up = $(this).find('.up');
     let $down = $(this).find('.down');
-    let $input =  $obj.find('.num');    
+    let $input =  $obj.find('.num');
     let minCnt = $obj.data('min') != undefined ? $obj.data('min') : 0;
     let maxCnt = $obj.data('max') != undefined ? $obj.data('max') : 1000;
     let cntInputNum =  $obj.find('.num').val();
@@ -269,7 +269,7 @@ function countInput(obj){
       else if(!val) val = 0
 
       inpval = val;
-      $($input).val(val);
+//      $($input).val(val);
 
       if(val == 1) $obj.addClass('one');
       else $obj.removeClass('one');
@@ -277,12 +277,12 @@ function countInput(obj){
 
     //초기화
     $obj.find('button').each(function(){
-      if($(this).hasClass('down') && cntInputNum <= minCnt) $(this).attr('disabled', 'disabled');
-      else if($(this).hasClass('up') && cntInputNum >= maxCnt)  $(this).attr('disabled', 'disabled');
+  //    if($(this).hasClass('down') && cntInputNum <= minCnt) $(this).attr('disabled', 'disabled');
+   //   else if($(this).hasClass('up') && cntInputNum >= maxCnt)  $(this).attr('disabled', 'disabled');
     });
     $obj.find('button').off('click.count');
     $obj.find('button').on('click.count', function(e){
-      e.stopPropagation();      
+      e.stopPropagation();
       inpval = parseInt($obj.find('input').val());
        if($(this).hasClass('up')) countChange(inpval + 1);
        if($(this).hasClass('down')) countChange(inpval - 1);
@@ -307,7 +307,7 @@ function maxLengthChk(object){
 function fileAdd(wrap){
   if($(wrap).length <= 0) return;
   let $wrap = $(wrap);
-  
+
   create();
   function create(){
     let html = `<div class="inp-file">
@@ -346,8 +346,8 @@ function fileAdd(wrap){
     $wrap.find('input[type=file]').each(function(i){
       $(this).attr('name', 'file'+i);
     })
-  }  
-  
+  }
+
 }
 
 
@@ -397,7 +397,7 @@ function dateSet(){
       var day = ("0" + nowDate.getDate()).slice(-2);
 
       return year + "-" + month + "-" + day;
-  }    
+  }
 
   $(this).parents('.date-setting-box').find(".datepicker").on('change', function(){
     console.log('change');
@@ -408,7 +408,7 @@ function dateSet(){
 function datepicker(){
   if($(".datepicker").length <= 0) return;
    $(".datepicker").datepicker({
-     dateFormat:'yy-dd-mm',
+     dateFormat:'yy-mm-dd',
    });
    $.datepicker.setDefaults({
      dateFormat: 'yymmdd',
@@ -445,7 +445,7 @@ function toggleBtns(){
   });
 }
 
-	
+
 function comma(){
   $('[data-evt=price]').on('keyup', function(e){
     var val = this.value.replace(/[^0-9]/g, "");
@@ -454,17 +454,16 @@ function comma(){
 }
 
 function productMenuCheck(){
-  $('.item-cont .item-link button').on('click', function(){
+  $(document).on('click', '.item-cont .item-link button', function(){
     $(this).toggleClass('on');
   });
 }
-
 
 /* popup */
 function popClose(id){
 	$(id).fadeOut(300);
 	$('body').css('overflow','');
-} 
+}
 
 function popOpen(id, callback){
 	$(id).fadeIn(300);
@@ -550,14 +549,29 @@ function loading(){
     </div>
   </div>`
 
-  const $loading = $(loadingHtml);  
-  $('.wrap').append($loading);  
+  const $loading = $(loadingHtml);
+  $('.wrap').append($loading);
   $('body, html').css('overflow', 'hidden');
 }
 function loadingClose(){
-  $('.loading-bar').remove();  
+  $('.loading-bar').remove();
   $('body, html').css('overflow', '');
 }
+
+function snbMenu(){
+	  $('.snb-menu li.on > ul').slideDown();
+	  $('.snb-menu li a').on('click', function(){
+	    if($(this).parent().hasClass('on')){
+	      $(this).next().slideUp(function(){
+	        $(this).parent().removeClass('on');
+	      });
+	    }else{
+	      $(this).parent().addClass('on');
+	      $(this).next().slideDown();
+	    }
+	  });
+	}
+
 
 $(function(){
   gnbMenu();
@@ -575,4 +589,7 @@ $(function(){
   toggleBtns();
   datepicker();
   upani();
+
+  snbMenu();
+
 });

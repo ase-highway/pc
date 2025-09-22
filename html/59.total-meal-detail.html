@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <div class="title-category st-visual" style="background-image: url('../images/common/bg-today-meal.png');">
+      <h2 class="title">오늘의 밥상</h2>
+      <div class="txt">오늘 뭐 먹을지 고민된다면? <br>여기서 한 번 골라보세요! 다양한 레시피가 가득!</div>
+    </div>
+    
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        
+        <div class="today-meal-detail">
+          <img src="../images/temp/temp-today-meal.jpg" alt="">
+        </div>
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+</body>
+</html>

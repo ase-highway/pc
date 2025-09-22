@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <div class="title-category st-visual" style="background-image: url('../images/common/bg-today-meal.png');">
+      <h2 class="title">오늘의 밥상</h2>
+      <div class="txt">오늘 뭐 먹을지 고민된다면? <br>여기서 한 번 골라보세요! 다양한 레시피가 가득!</div>
+    </div>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+
+				<div class="category-list" id="categoryProductSlide">
+					<button type="button" class="swiper-button-prev"></button>
+					<button type="button" class="swiper-button-next"></button>
+					<div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_all.png" alt=""></div>
+                <div class="txt">전체</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_1.png" alt=""></div>
+                <div class="txt">한식</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_2.png" alt=""></div>
+                <div class="txt">중식</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_3.png" alt=""></div>
+                <div class="txt">일식</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_4.png" alt=""></div>
+                <div class="txt">양식</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_5.png" alt=""></div>
+                <div class="txt">음료</div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <div class="img"><img src="../images/today-meal/today_icon_6.png" alt=""></div>
+                <div class="txt">그외</div>
+              </a>
+            </div>
+					</div>
+				</div>
+
+        <div class="today-meal-list">
+          <ul>
+            <li>
+              <a href="javascript:void(0);" class="link">
+                <div class="img"><img src="https://i.ytimg.com/vi/bkXmPDSFryU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDzOAxyEXx0xrhUkcV5QhQ157eADQ" alt=""></div>
+                <div class="desc">
+                  <strong>돼지 등갈비 구이 한상</strong>
+                  <p class="txt">단짠단짠! 손으로 잡고 뜯기 좋은 등갈비 구이로 오늘 한 끼 어떠세요?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="link">
+                <div class="img"><img src="https://i.ytimg.com/vi/bkXmPDSFryU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDzOAxyEXx0xrhUkcV5QhQ157eADQ" alt=""></div>
+                <div class="desc">
+                  <strong>돼지 등갈비 구이 한상</strong>
+                  <p class="txt">단짠단짠! 손으로 잡고 뜯기 좋은 등갈비 구이로 오늘 한 끼 어떠세요?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="link">
+                <div class="img"><img src="https://i.ytimg.com/vi/bkXmPDSFryU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDzOAxyEXx0xrhUkcV5QhQ157eADQ" alt=""></div>
+                <div class="desc">
+                  <strong>돼지 등갈비 구이 한상</strong>
+                  <p class="txt">단짠단짠! 손으로 잡고 뜯기 좋은 등갈비 구이로 오늘 한 끼 어떠세요?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="link">
+                <div class="img"><img src="https://i.ytimg.com/vi/bkXmPDSFryU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDzOAxyEXx0xrhUkcV5QhQ157eADQ" alt=""></div>
+                <div class="desc">
+                  <strong>돼지 등갈비 구이 한상</strong>
+                  <p class="txt">단짠단짠! 손으로 잡고 뜯기 좋은 등갈비 구이로 오늘 한 끼 어떠세요?</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- pagination -->
+        <div class="pagination">
+          <a href="javascript:void(0);" class="btn-first"></a>
+          <a href="javascript:void(0);" class="btn-prev"></a>
+          <ul>
+            <li class="on"><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li><span>4</span></li>
+            <li><span>5</span></li>
+          </ul>
+          <a href="javascript:void(0);" class="btn-next"></a>
+          <a href="javascript:void(0);" class="btn-last"></a>
+        </div>
+        <!-- // pagination -->
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+  <script>
+    if($('#categoryProductSlide .swiper-slide').length > 7){
+      basicSlide('#categoryProductSlide', { slidesPerView: 7, spaceBetween: 20, min: 7, loop:false })
+    }
+  </script>
+</body>
+</html>
