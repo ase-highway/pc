@@ -600,7 +600,7 @@ footer .footer-link li { display:inline-block; vertical-align:top; position:rela
 footer .footer-link ul li:first-child { padding-left:0; }
 footer .footer-link ul li a { color:#000000; font-size:16px; font-weight:400; }
 footer .footer-link ul li::before { content:""; position:absolute; top:0; left:0; width:1px; height:16px; background:#a1a1a1; }
-footer .footer-link ul li:first-child::before { border-left:0; }
+footer .footer-link ul li:first-child::before { border-left:0; display:none;}
 footer .footer-info-list ul{display:flex;align-items:center;}
 footer .footer-info-list ul ~ ul{margin-top:8px;}
 footer .footer-info-list ul li { position:relative; display:inline-block;}
