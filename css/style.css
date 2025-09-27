@@ -186,7 +186,7 @@
 .main-today-meal-wrap .today-meal {position:relative;}
 .main-today-meal-wrap .today-meal .img {width:490px;height:580px;position:relative;}
 .main-today-meal-wrap .today-meal .img:before{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background: linear-gradient(180deg, rgba(217, 217, 217, 0) 50%, rgba(0, 0, 0, 0.8) 100%);} 
-.main-today-meal-wrap .today-meal .img img {width:100%;height:100%;background-size:cover;}
+.main-today-meal-wrap .today-meal .img img {width:100%;height:100%;object-fit: cover;}
 .main-today-meal-wrap .today-meal .desc {position:absolute;bottom:0;left:0;width:100%; color:#fff;padding:45px 40px;}
 .main-today-meal-wrap .today-meal .desc strong {font-size:40px;font-weight:700;display:block;}
 .main-today-meal-wrap .today-meal .desc p {margin-top:20px;font-size:18px;}
